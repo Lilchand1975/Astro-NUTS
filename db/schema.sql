@@ -29,24 +29,33 @@ INSERT INTO astro (day_of_the_week, personality, hobbies, life_partner, lucky_nu
 
 -- MONDAY
 
-VALUES ("Monday", "Being born on Monday, you are creative. But, you hardly share it with other. You are calm, soft hearted and anxious. you are very selective in making friends. You can hardly harm other people.", "Travelling, reading books and learning new things", "Your life partner", 5, "You could be Hydrophobic", "Having a creative bend of mind, teaching, academic, artistic and skilled are best suited.You pose good leadership quality and high decision-making ability.", "You could be a Taurus", "Food: Continental, Animal: Lamb, Color: Blue, Music: Country"),
+VALUES ("Monday", "Being born on Monday, you are creative. But, you hardly share it with other. You are calm, soft hearted and anxious. you are very selective in making friends. You can hardly harm other people.", "Travelling, reading books and learning new things", "Your life partner. You are suggested to pair up with thursday born", 5, "You could be Hydrophobic", "Having a creative bend of mind, teaching, academic, artistic and skilled are best suited.You pose good leadership quality and high decision-making ability.", "You could be a Taurus", "Food: Continental, Animal: Lamb, Color: Blue, Music: Country"),
 
 -- TUESDAY
 ("Tuesday","Your personality ...", "Your hobbies", "Your life partner", "Your lucky number", "Your Phobia", "Your profession", "Your Zodiac sign", "Your favorites"),
+VALUES ("Tuesday", "Being born on Tuesday, you are powerhouse of energy.challenges and hurdles never put you off. Your inborn tendency to rule and lead makes you impulsive but couragious.", "rulling, leading, reading war books and learning new things", "Your life partner. You are suggested to pair up with friday born", 7, "You could be Nyctophobic (fer of darkness)", "Having a couragious bend of mind, rulling, leading, artistic and skilled are best suited.You pose good leadership quality and high decision-making ability.", "You could be a Aries", "Food: Continental, Animal: tiger, Color: red, Music: Rock"),
 
 -- WEDNESDAY
 ("Wednesday", "Your personality ...", "Your hobbies", "Your life partner", "Your lucky number", "Your Phobia", "Your profession", "Your Zodiac sign", "Your favorites"),
+VALUES ("Wednesday", "Being born on Wednesday, you are born with a wise soul possesing wisdom, intelligence, and practicality. you  could have innate telepath ability. You can hardly harm other people.", "Travelling, reading books and learning new things", "Your life partner. you can pair well with Sunday born.", 9, "You could be Pagophobic (Fear of ice)", "Wednesday borns are good communicators, professions such as Salesman, Politics, and Lawyers are best suited.", "You could be a Gemini", "Food: oriental, Animal: fox, Color: yellow, Music: pop"),
 
 -- THURSDAY
 ("Thursday", "Your personality ...", "Your hobbies", "Your life partner", "Your lucky number", "Your Phobia", "Your profession", "Your Zodiac sign", "Your favorites"),
+VALUES ("Thursday", "Being born on Thursday,  like affection, love, beauty, partnership, romance, refinement, art, pleasures, luxuries and comforts..", "Teaching, advising,reading books and learning new things are your hobbies", "Your life partner. Choose a monday born.", 3, "You could be Claustrophobic (fear of small space).", "Thursday borns are good communicators, professions such as teachers, Politicians, and Lawyers are best suited.", "You could be a virgo", "Food: oriental, Animal: cow, Color: blue, Music: sentimental"),
 
 -- FRIDAY
 ("Friday", "Your personality ...", "Your hobbies", "Your life partner", "Your lucky number", "Your Phobia", "Your profession", "Your Zodiac sign", "Your favorites"),
+VALUES ("Friday", "Being born on Friday, you like affection, love, beauty, partnership, romance, refinement, art, pleasures, luxuries and comforts. You are rather lazy.", "Singing, Dancing, decorating are your interests.", "Your life partner. You are suggested to pair up with tuesday born", 1, "You could be trypophobic (fear of holes).", "Since your are artistic, dancer, musician or a journalist is suggested.", "You could be a Cancer", "Food: fastfood, Animal: turtle, Color: Gray, Music: Country"),
 
 -- SATURDAY
 ("Saturday", "Your personality ...", "Your hobbies", "Your life partner", "Your lucky number", "Your Phobia", "Your profession", "Your Zodiac sign", "Your favorites"),
+VALUES ("Saturday", "Being born on Saturday, You are slow, steady, hardworking and disciplined. You are also intelligent, professional, practical, very strict and straightforward.You are terrible when it comes to time management.", "trade and business are your interests.", "Your life partner. You are suggested to pair up with sunday born", 8, "You could be acrophobic (fear of heights).", "Since your are business oriented, trade and business is highly suggested.", "You could be a libra", "Food: spicy, Animal: pig, Color: black, music: jazz"),
+
 
 -- SUNDAY
 ("Sunday", "Your personality ...", "Your hobbies", "Your life partner", "Your lucky number", "Your Phobia", "Your profession", "Your Zodiac sign", "Your favorites");
+VALUES ("Sunday", "Being born on Sunday, You truly shine in their life like a sun. You are bold, self-centered, proud, noble and confident individual. You are center of attraction.", "playing, watching movies and making new friends are your hobbies.", "Your life partner. You are suggested to pair up with saturday born", 2, "You could be photophobic (fear of lights).", "Leadership roles will suit you the most.", "You could be a scorpio", "Food: oriental, Animal: swan, Color: white, music: country"),
+
+
 
 SELECT * FROM astro;
