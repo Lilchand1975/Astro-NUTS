@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var burger = require('../models/burger.js');
+var Users = require('../models/index.js');
 
 
 // Index Redirect
@@ -11,16 +11,16 @@ router.get('/', function (req, res) {
 
 // Index Page (render all astro to DOM)
 router.get('/index', function (req, res) {
-  burger.selectAll(function(data) {
-    var hbsObject = { burgers: data };
+  user.selectAll(function(data) {
+    var hbsObject = { Users: data };
     res.render('index', hbsObject);
   });
 });
 
 
 // user new astro
-router.post('/burger/create', function (req, res) {
-  burger.insertOne(req.body.burger_name, function() {
+router.post('/Users/create', function (req, res) {
+  Users.insertOne(req.body.first_name, function() {
     res.redirect('/index');
   });
 });

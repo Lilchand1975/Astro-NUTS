@@ -1,4 +1,6 @@
-/*
-.container {
-background-color: cornsilk;
-}*/
+#jumbo {
+    background-image: url("./images/night-sky.jpg");
+    background-repeat: no-repeat;
+    padding: 100px;
+    color: lightgreen;
+}
