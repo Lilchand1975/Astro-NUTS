@@ -19,4 +19,6 @@ var router = require('./controllers/astro_controller.js');
 app.use('/', router);
 
 var PORT = process.env.PORT || 8080;
-app.listen(PORT);
+app.listen(PORT, function() {
+    console.log("App now listening at localhost: " +PORT)
+});
