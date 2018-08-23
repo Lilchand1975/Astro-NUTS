@@ -1,10 +1,10 @@
--- Database Creation
+DROP DATABASE IF EXISTS astro_db;
 CREATE DATABASE astro_db;
 USE astro_db;
 
 -- ID INT NOT NULL AUTO_INCREMENT
 
-CREATE TABLE Users (
+CREATE TABLE users (
   ID int NOT NULL AUTO_INCREMENT,
   born_day VARCHAR(255) NOT NULL,
   first_name VARCHAR(255) NOT NULL,

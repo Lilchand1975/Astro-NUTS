@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Users = require('../models/index.js');
+var users = require('../models/index.js');
 
 
 // Index Redirect
@@ -9,23 +9,19 @@ router.get('/', function (req, res) {
 });
 
 
-// Index Page (render all astro to DOM)
 router.get('/index', function (req, res) {
-  user.selectAll(function(data) {
-    var hbsObject = { Users: data };
+  users.selectAll(function(data) {
+    var hbsObject = { users: data };
     res.render('index', hbsObject);
   });
 });
 
 
-// user new astro
-router.post('/Users/create', function (req, res) {
-  Users.insertOne(req.body.first_name, function() {
+router.post('/users/create', function (req, res) {
+  users.insertOne(req.body.first_name, function() {
     res.redirect('/index');
   });
 });
-
-
 
 // Export routes
 module.exports = router;
