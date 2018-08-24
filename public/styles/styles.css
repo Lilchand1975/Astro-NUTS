@@ -4,3 +4,11 @@
     padding: 100px;
     color: lightgreen;
 }
+    body{
+      margin-top:30px;
+
+    }
+    #messageArea{
+      display:none;
+    }
+  

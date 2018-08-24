@@ -19,7 +19,8 @@
     "mysql": "^2.16.0",
     "mysql2": "^1.5.3",
     "node": "^10.8.0",
-    "sequelize": "^4.38.0"
+    "sequelize": "^4.38.0",
+    "socket.io": "^2.1.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
@@ -34,7 +35,7 @@
     "type": "git",
     "url": "git+https://github.com/Lilchand1975/Astro-NUTS.git"
   },
-  "author": "",
+  "author": "Rebecca_Laxman_Chandra",
   "bugs": {
     "url": "https://github.com/Lilchand1975/Astro-NUTS/issues"
   },
