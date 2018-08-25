@@ -1,18 +1,23 @@
 
         <div class="jumbotron" id="jumbo">
-                <h1 class="display-4">Astrology App</h1>
-                <p class="lead">The only astrology app you will ever need.</p>
+                <h1 class="display-4" id="app"> An Astrology App</h1>
+                <p class="lead" id="bapp">The only astrology app you will ever need.</p>
                 <hr>
                 <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                 <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
                 <p class="text-right">Developed by Astro-Nuts.</p>
+            <footer class="center-footer">
+            <div class="container" id="foot" >
+                <p> copyright © Astrology App 2018</p>
+            </div>
+        </footer>
 
         </div>
 
         <section id="learn-more">
             <div class="padding">
-                <h2>About the App</h2>
-                <p>"Astrology App" is a project work prepared by Rebecca, Laxman and Chandra "Astro-NUTS". This project work is conceptualized and built from scratch. The information in the website is derived from online research. The results may or may not match with one or many. The developers do not have illicit or malicious intention in creating this app. It will only be an unpleasant coincidence if it does not match.</p>
+                <h2>About the App...</h2>
+                <p>"Astrology App" is a project work prepared by Rebecca, Laxman and Chandra "Astro-NUTS". This project work is conceptualized and built from scratch. The information in the website is derived from multiple researches done online. It is compiled after careful comparision and evaluation from multiple websites.  We have picked the most common characteristics, paraphrased them concisely before loading into the database. The results may or may not match with one or many. The developers do not have illicit or malicious intention to hurt any individual living or dead by creating this app. Resemblence to anybody  will only be an unpleasant coincidence. Remember the developers are Astro-<b>NUTS.</b></p>
             </div>
         </section>
 
@@ -21,15 +26,15 @@
         
         <form action="/users/create" method ="POST">
             <div class="form-group">
-                <label for="exampleFormControlInput1">First Name</label>
+                <label for="exampleFormControlInput1">First Name:</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your First Name">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Last Name</label>
+                <label for="exampleFormControlInput1">Last Name:</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Last Name">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Day You Were Born</label>
+                <label for="exampleFormControlSelect1">Day You Were Born:</label>
                 <select class="form-control" id="exampleFormControlSelect1">
                     <option>Monday</option>
                     <option>Tuesday</option>
@@ -41,10 +46,10 @@
                 </select>
             </div>
                        
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label for="exampleFormControlInput1">Email</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your E-Mail">
-            </div>
+            </div> -->
             </form>
 
                     <button type="button" class="btn btn-primary">Submit</button>
