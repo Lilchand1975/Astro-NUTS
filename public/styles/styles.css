@@ -4,11 +4,35 @@
     padding: 100px;
     color: lightgreen;
 }
-    body{
-      margin-top:30px;
-
-    }
-    #messageArea{
+  body{
+    margin-top:30px;
+}
+#app{
+  font-family: 'Yatra One', cursive;
+  text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+}
+#bapp{
+  font-family: 'IM Fell English', serif;
+  font-size: 22px;
+}
+#messageArea{
       display:none;
-    }
-  
+}
+#learn-more{
+  font-family: 'Yatra One', cursive;
+  font-size: 16px;
+  font-style: italic; 
+}
+#foot{
+  margin-top: 60px;
+  text-align: center;
+}
+.form-group{
+  font-family: 'Carter One', cursive;
+}
+#nme{
+  font-family: 'Yatra One', cursive;
+  color: rgb(29, 1, 54);
+}
+
+
