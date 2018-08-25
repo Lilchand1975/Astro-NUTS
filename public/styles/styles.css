@@ -6,6 +6,9 @@
 }
   body{
     margin-top:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #app{
   font-family: 'Yatra One', cursive;
@@ -15,8 +18,48 @@
   font-family: 'IM Fell English', serif;
   font-size: 22px;
 }
+
+#chat-window {
+  display: none;
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  border-radius: 7px;
+  padding: 2rem;
+  background-color: #26C6DA;
+  width: 400px;
+  height: 50vh;
+  overflow-y: scroll;
+  box-shadow: 0px 1px 5px 1px #b1b1b1;
+}
 #messageArea{
       display:none;
+}
+
+#onLineUsers {
+  display: none;
+}
+
+.chat-icon-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border-radius: 7px;
+  background-color: #26C6DA;
+  color: #fafafa;
+  font-size: 2rem;
+  padding: .8rem;
+  box-shadow: 0px 1px 5px 1px #b1b1b1;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.chat-icon-button:hover {
+  box-shadow: 0px 2px 5px 1px #b1b1b1;
+}
+
+#chat-close {
+  display: none;
 }
 #learn-more{
   font-family: 'Yatra One', cursive;
