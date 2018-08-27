@@ -38,5 +38,19 @@ module.exports = function(app) {
   app.get("/api/days/sunday", function(req, res) {
     res.json(daysData[6]);
   });
-    
+  
+  //saving new user
+    app.post("/api/users", function(req,res) {
+      console.log(req.body);
+      db.User.create({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        birthday: req.body.birthday
+      })
+        .then(function(dbUser) {
+          console.log(dbUser);
+          res.json(dbUser);
+        });
+    });
+  
 };

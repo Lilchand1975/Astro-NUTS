@@ -33,6 +33,40 @@ $(document).ready(function() {
 
         });
     });
+    //Post
+    // Getting jQuery references to the user first name, last name and birthday
+    var firstInput = $("#firstName");
+    var lastInput = $("#lastName");
+    var birthdayInput = $("#birthday");
+
+    // Adding an event listener for when the form is submitted
+  $("#submit-button").on("click", function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    // Constructing a newPost object to hand to the database
+    var newUser = {
+      firstName: firstInput.val().trim(),
+      lastName: lastInput.val().trim(),
+      birthday: birthdayInput.val(),
+    };
+
+    console.log(newUser);
+
+
+      submitUser(newUser);
+
+
+
+    // Submits a new user
+    function submitUser(User) {
+    $.post("/api/users/", User, function() {
+      console.log(User);
+    });
+  }
+
+  });
+
+    //
 
     //Chat App
     // creating variables.
