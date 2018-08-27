@@ -7,48 +7,85 @@
 
     <!--Custom CSS-->
     <link rel="stylesheet" href="../styles/styles.css">
-
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!--Socket iO-->
+    <script src="/socket.io/socket.io.js"></script>
 
     <title>Astrology App</title>
   </head>
   <body>
-    <div class="container">
-        <!--NavBAR -->
-            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Astrology App</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
-                        <a class="nav-item nav-link" href="#">Features</a>
-                        <a class="nav-item nav-link" href="#">Pricing</a>
-                        <a class="nav-item nav-link disabled" href="#">Disabled</a>
-                    </div>
+    <!--Chat App-->
+    <!--Chat App-->
+    <div id="chat-window">
+        <div id="userFormArea" class="row">
+          <div class="col-md-12">
+            <form id="userForm">
+              <div class="form-group">
+                <label>Enter name</label>
+                <input class="form-control" id="username" required />
+                <br />
+                <input type="submit" class="btn btn-primary" value="Login" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="messageArea" class="row">
+          <div class="col-md-4" id="onLineUsers">
+            <div class="well">
+              <h3>Online Users</h3>
+              <ul class="list-group" id="users"></ul>
+            </div>
+          </div>
+          <div id="small-container">
+            <div class="col-md-8">
+              <div class="userMsg" id="userMsg">
+                <span class="chat" id="chat"></span>
+              </div>
+              <form id="messageForm">
+                <div class="form-group">
+                  <label>Enter Chat </label>
+                  <textarea class="form-control" id="message"></textarea>
+                  <br />
+                  <input type="submit" class="btn btn-primary" value="Send" />
                 </div>
-            </nav> -->
-        <!--End-->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div id="chat-toggle" class="chat-icon-button">
+      <div id="chat-open">
+        <i class="far fa-comments"></i>
+        <span>chat</span>
+      </div>
+      <div id="chat-close">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+  </div>
+    <!--End Chat App-->
+    
+    <div class="container">
 
         <div class="jumbotron" id="jumbo">
-                <h1 class="display-4">Astrology App</h1>
-                <p class="lead">The only astrology app you will ever need.</p>
+                <h1 class="display-4" id="app"> An Astrology App</h1>
+                <p class="lead" id="bapp">The only astrology app you will ever need.</p>
                 <hr>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+                <a class="btn btn-primary btn-lg" href="#learn-more" role="button">Learn more</a>
+                <a class="btn btn-primary btn-lg" href="#get-started" role="button">Get Started</a>
                 <p class="text-right">Developed by Astro-Nuts.</p>
 
         </div>
 
         <section id="learn-more">
             <div class="padding">
-                <h2>About the App</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis erat ex, vel viverra sapien tristique vitae. Etiam arcu erat, feugiat nec lectus dapibus, tempor ultrices nibh. Integer a sodales felis, in auctor sapien. Aenean quis felis consectetur, ornare lectus at, sagittis justo. Duis tempus cursus quam id posuere. Sed felis nulla, dictum in dignissim ut, aliquet eu arcu. Cras pretium sapien sit amet tristique interdum. Donec ut elit diam. Praesent mattis eget ante sit amet sagittis. Nulla non lectus nunc. Donec in arcu velit. Aliquam laoreet lobortis arcu, ac sagittis magna vestibulum eu. Aenean tempor fermentum nunc. Donec egestas ultricies tincidunt. In tristique vehicula ullamcorper. Curabitur molestie convallis tellus et feugiat.</p>
+                <h2>About the App...</h2>
+                <p>"Astrology App" is a project work prepared by Rebecca, Laxman and Chandra "Astro-NUTS". This project work is conceptualized and built from scratch. The information in the website is derived from multiple researches done online. It is compiled after careful comparision and evaluation from multiple websites.  We have picked the most common characteristics, paraphrased them concisely before loading into the database. The results may or may not match with one or many. The developers do not have illicit or malicious intention to hurt any individual living or dead by creating this app. Resemblence to anybody  will only be an unpleasant coincidence. Remember the developers are Astro-<b>NUTS.</p>
             </div>
         </section>
 
@@ -56,47 +93,98 @@
             <div class="padding">
                     <form>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">First Name</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your First Name">
+                            <label for="firstName">First Name</label>
+                            <input class="form-control" id="firstName" placeholder="Enter Your First Name">
                         </div>
                         <div class="form-group">
-                                <label for="exampleFormControlInput1">Last Name</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Last Name">
+                                <label for="lastName">Last Name</label>
+                                <input class="form-control"id="lastName" placeholder="Enter Your Last Name">
                             </div>
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Day You Were Born</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Monday</option>
-                                <option>Tuesday</option>
-                                <option>Wednesday</option>
-                                <option>Thursday</option>
-                                <option>Friday</option>
-                                <option>Saturday</option>
-                                <option>Sunday</option>
+                            <label for="birthday">Day You Were Born</label>
+                            <select class="form-control">
+                                <option data-day="Monday">Monday</option>
+                                <option data-day="Tuesday">Tuesday</option>
+                                <option data-day="Wednesday">Wednesday</option>
+                                <option data-day="Thursday">Thursday</option>
+                                <option data-day="Friday">Friday</option>
+                                <option data-day="Saturday">Saturday</option>
+                                <option data-day="Sunday">Sunday</option>
                             </select>
                         </div>
-                       
-                        <div class="form-group">
-                                <label for="exampleFormControlInput1">Email</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your E-Mail">
-                            </div>
                     </form>
-
-                    <button type="button" class="btn btn-primary">Submit</button>
+                    <br>
+                    <!-- Button trigger modal -->
+                    <button type="submit" class="btn btn-success submit btn-lg" data-toggle="modal" data-target="#exampleModal" id="submit-button">Submit</button>
             </div>
         </section>
+
+         <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Results</h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div id="row2">
+                <h1>Personality/Character Traits</h1>
+                <div class="personality"></div>
+            </div>
+            <div id="row3">
+                <h1>Hobbies/Interests</h1>
+                <div class="hobbies"></div>
+            </div>
+            <div id="row4">
+                <h1>Life Partner</h1>
+                <div class="lifePartner"></div>
+            </div>
+            <div id="row5">
+                <h1>Lucky Number</h1>
+                <div class="luckyNumber"></div>
+            </div>
+            <div id="row6">
+                <h1>Phobia</h1>
+                <div class="phobia"></div>
+            </div>
+            <div id="row7">
+                <h1>Suggested Profession</h1>
+                <div class="profession"></div>
+            </div>
+            <div id="row8">
+                <h1>Zodiac Sign</h1>
+                <div class="zodiacSign"></div>
+            </div>
+            <div id="row9">
+                <h1>Favorites</h1>
+                <div class="favorites"></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div> 
 
         <footer class=" center footer">
             <div class="container" id="foot">
                 <p> copyright © Astrology App 2018</p>
             </div>
         </footer>
-    </div>
+ 
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/prediction.js"></script>
+    
+    
   </body>
 </html>

@@ -1,81 +1,95 @@
 #jumbo {
-    background-image: url("./images/night-sky.jpg");
-    background-repeat: no-repeat;
-    padding: 100px;
-    color: lightgreen;
+  background-image: url("./images/night-sky.jpg");
+  background-repeat: no-repeat;
+  padding: 100px;
+  color: lightgreen;
 }
-  body{
-    margin-top:30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body{
+  margin-top:30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #app{
-  font-family: 'Yatra One', cursive;
-  text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+font-family: 'Yatra One', cursive;
+text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
 }
 #bapp{
-  font-family: 'IM Fell English', serif;
-  font-size: 22px;
+font-family: 'IM Fell English', serif;
+font-size: 22px;
 }
 
 #chat-window {
-  display: none;
-  position: fixed;
-  bottom: 6rem;
-  right: 2rem;
-  border-radius: 7px;
-  padding: 2rem;
-  background-color: #26C6DA;
-  width: 400px;
-  height: 50vh;
-  overflow-y: scroll;
-  box-shadow: 0px 1px 5px 1px #b1b1b1;
+display: none;
+position: fixed;
+bottom: 6rem;
+right: 2rem;
+border-radius: 7px;
+padding: 2rem;
+background-color: #26C6DA;
+width: 400px;
+height: 50vh;
+overflow-y: scroll;
+box-shadow: 0px 1px 5px 1px #b1b1b1;
 }
 #messageArea{
-      display:none;
+    display:none;
 }
 
 #onLineUsers {
-  display: none;
+display: none;
 }
 
 .chat-icon-button {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  border-radius: 7px;
-  background-color: #26C6DA;
-  color: #fafafa;
-  font-size: 2rem;
-  padding: .8rem;
-  box-shadow: 0px 1px 5px 1px #b1b1b1;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
+position: fixed;
+bottom: 2rem;
+right: 2rem;
+border-radius: 7px;
+background-color: #26C6DA;
+color: #fafafa;
+font-size: 2rem;
+padding: .8rem;
+box-shadow: 0px 1px 5px 1px #b1b1b1;
+cursor: pointer;
+transition: 0.3s ease-in-out;
 }
 
 .chat-icon-button:hover {
-  box-shadow: 0px 2px 5px 1px #b1b1b1;
+box-shadow: 0px 2px 5px 1px #b1b1b1;
 }
 
 #chat-close {
-  display: none;
+display: none;
 }
 #learn-more{
-  font-family: 'Yatra One', cursive;
-  font-size: 16px;
-  font-style: italic; 
+font-family: 'Yatra One', cursive;
+font-size: 16px;
+font-style: italic; 
 }
 #foot{
-  margin-top: 60px;
-  text-align: center;
+margin-top: 60px;
+text-align: center;
 }
 .form-group{
-  font-family: 'Carter One', cursive;
+font-family: 'Carter One', cursive;
 }
 #nme{
-  font-family: 'Yatra One', cursive;
-  color: rgb(29, 1, 54);
+font-family: 'Yatra One', cursive;
+color: rgb(29, 1, 54);
 }
 
+.modal-content,{
+  background-color: linen;
+}
+.modal-body{
+  background-color: linen;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+.modal h1{
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold; 
+  margin-top: 15px;
+}
