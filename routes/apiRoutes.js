@@ -1,24 +1,42 @@
+// LOAD DATA
+var daysData = require("../public/data/days.js");
 var db = require("../models");
 
+
+// ROUTING
+
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
+  
+  app.get("/api/days/", function(req, res) {
+    res.json(daysData);
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
+  app.get("/api/days/monday", function(req, res) {
+    res.json(daysData[0]);
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
+  app.get("/api/days/tuesday", function(req, res) {
+    res.json(daysData[1]);
   });
+
+  app.get("/api/days/wednesday", function(req, res) {
+    res.json(daysData[2]);
+  });
+
+  app.get("/api/days/thursday", function(req, res) {
+    res.json(daysData[3]);
+  });
+
+  app.get("/api/days/friday", function(req, res) {
+    res.json(daysData[4]);
+  });
+
+  app.get("/api/days/saturday", function(req, res) {
+    res.json(daysData[5]);
+  });
+
+  app.get("/api/days/sunday", function(req, res) {
+    res.json(daysData[6]);
+  });
+    
 };

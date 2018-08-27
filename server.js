@@ -1,23 +1,20 @@
-var express = require('express');
-var bodyParser = require('body-parser');
+var express = require("express");
+var bodyParser = require("body-parser");
 
 var app = express();
-app.use(express.static(process.cwd() + '/public'));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+var db = require("./models");
 
-var exphbs = require('express-handlebars');
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
+app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(bodyParser.json());
 
-var router = require('./controllers/astro_controller.js');
-app.use('/', router);
+app.use(express.static("public"));
 
-// var PORT = process.env.PORT || 8080;
-// app.listen(PORT, function() {
-//     console.log("App now listening at localhost: " +PORT)
-// });
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
+
+db.sequelize.sync({ force: true });
 
 // begains chatApp server.
 
